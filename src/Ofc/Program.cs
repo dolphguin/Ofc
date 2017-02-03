@@ -15,14 +15,14 @@ namespace Ofc
     using System.IO;
     using System.Linq;
     using System.Text;
-    using Actions;
-    using Algorithm.Blocky.Integration;
     using CLI;
     using CLI.Validators;
     using Core;
+    using Core.Actions;
+    using Core.Algorithm.Blocky.Integration;
     using Core.Configurations;
+    using Core.Util;
     using JetBrains.Annotations;
-    using Util;
 
     /// <summary>
     ///   Contains the main entrypoint for the application and the all the CLI functionality.
@@ -133,7 +133,7 @@ namespace Ofc
 
                 // parse the arguments
                 var result = argumentParser.Parse(args);
-
+                
                 var ok = false;
                 // check if the parser succeeded 
                 if (result.Success)

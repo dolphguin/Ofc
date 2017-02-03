@@ -1,0 +1,1 @@
+dotnet publish src/Ofc/Ofc.csproj -o ../../publish -c Release
